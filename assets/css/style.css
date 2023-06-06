@@ -1,5 +1,5 @@
 * {
-  font-family: sans-serif;
+  font-family: "Consolas", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
@@ -12,19 +12,20 @@ body {
 
 /* Basic layout */
 header {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 20px;
+  /* padding: 10px; */
   border-bottom: 1px solid #808080;
-  /* background: linear-gradient(#f2f2f2, #eaeaea); */
-  /* background: linear-gradient(#eaeaea, #f2f2f2); */
-  /* background: linear-gradient(#eaeaea, #808080); */
-  /* background-color: #808080; */
+  z-index:1000;
 }
 
-.logo img {
-  width: 200px;
+#logo img {
+  width: 150px;
   height: auto;
 }
 
@@ -49,17 +50,34 @@ nav ul li a:hover {
 }
 
 main {
-  margin-top: 30px;
-  width: 100%;
+  /* position: relative; */
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
-
-main h1 {
-  font-size: 2em;
+.main-content
+{
+  min-width: 650px;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
-main p {
+#about {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  
+}
+/* #about p{
+  min-width: 500px;
+} */
+h1 {
+  font-size: 3em;
+}
+p {
   margin-top: 5px;
   font-size: 1.2em;
 }
